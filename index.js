@@ -10,6 +10,7 @@ const client = new Client({
 });
 
 client.on('qr', qr => {
+    console.log('QR Code recebido, escaneie para conectar:');
     qrcode.generate(qr, { small: true });
 });
 
@@ -19,7 +20,6 @@ client.on('ready', () => {
 
 client.initialize();
 
-// FUNÇÃO DE SAUDAÇÃO
 function saudacao() {
     const hora = new Date().getHours();
     if (hora >= 5 && hora < 12) return 'Bom dia';
@@ -29,20 +29,20 @@ function saudacao() {
 
 client.on('message', async msg => {
 
-    if (msg.fromMe) return;
-    if (!msg.from.endsWith('@c.us')) return;
+    console.log('Mensagem recebida:', msg.body);
+
+    if (msg.fromMe) return;        
 
     const numero = msg.from;
     const texto = msg.body.trim();
 
     console.log(`[MSG] ${numero}: ${texto}`);
-
-    // BLOQUEIO HUMANO
+    
     if (estados[numero]?.etapa === "humano") {
         return;
     }
 
-    // ================= MENU =================
+    // Lógica do Menu
     if (/oi|olá|ola|menu|bom dia|boa tarde|boa noite/i.test(texto)) {
 
         estados[numero] = { etapa: "menu" };
@@ -61,7 +61,7 @@ client.on('message', async msg => {
         return;
     }
 
-    // ================= UNIDADES =================
+    // Lógica das Unidades
     if (texto === '1' && estados[numero]?.etapa === 'menu') {
 
         estados[numero] = { etapa: "unidades" };
@@ -78,7 +78,7 @@ client.on('message', async msg => {
         return;
     }
 
-    // ================= ESCOLHER UNIDADE =================
+    // Lógica da escolha da unidade
     if (estados[numero]?.etapa === "unidades") {
 
         const unidade = unidades[texto];
@@ -105,7 +105,7 @@ client.on('message', async msg => {
         return;
     }
 
-    // ================= ESCOLHER MODALIDADE =================
+    // Lógica da escolha da modalidade
     if (estados[numero]?.etapa === "modalidades") {
 
         const unidade = unidades[estados[numero].unidadeId];
@@ -130,7 +130,7 @@ client.on('message', async msg => {
         return;
     }
 
-    // ================= ATENDIMENTO HUMANO =================
+    // Lógica do atendimento humano
     if (texto === '5' && estados[numero]?.etapa === 'menu') {
 
         estados[numero] = { etapa: "humano" };
