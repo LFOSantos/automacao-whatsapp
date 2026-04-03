@@ -1,0 +1,18 @@
+2026/04/03-14:03:04.625 5704 Reusing MANIFEST C:\Users\pdgss\Documents\legitimaDados\chatBot_WhatsApp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/03-14:03:04.628 5704 Recovering log #240
+2026/04/03-14:03:04.710 5704 Reusing old log C:\Users\pdgss\Documents\legitimaDados\chatBot_WhatsApp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000240.log 
+2026/04/03-14:03:12.560 4b3c Level-0 table #248: started
+2026/04/03-14:03:12.605 4b3c Level-0 table #248: 1545267 bytes OK
+2026/04/03-14:03:12.608 4b3c Delete type=0 #240
+2026/04/03-14:03:12.614 4b3c Compacting 1@1 + 4@2 files
+2026/04/03-14:03:12.733 4b3c Generated table #249@1: 43719 keys, 2208295 bytes
+2026/04/03-14:03:12.800 4b3c Generated table #250@1: 3253 keys, 2162059 bytes
+2026/04/03-14:03:12.942 4b3c Generated table #251@1: 25646 keys, 2197874 bytes
+2026/04/03-14:03:13.061 4b3c Generated table #252@1: 90521 keys, 2160590 bytes
+2026/04/03-14:03:13.061 4b3c Compacted 1@1 + 4@2 files => 8728818 bytes
+2026/04/03-14:03:13.062 4b3c compacted to: files[ 0 0 4 0 0 0 0 ]
+2026/04/03-14:03:13.063 4b3c Delete type=2 #242
+2026/04/03-14:03:13.063 4b3c Delete type=2 #243
+2026/04/03-14:03:13.063 4b3c Delete type=2 #244
+2026/04/03-14:03:13.063 4b3c Delete type=2 #245
+2026/04/03-14:03:13.064 4b3c Delete type=2 #248
