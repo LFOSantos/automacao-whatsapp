@@ -77,7 +77,7 @@ const unidades = {
                     "Terça à Sexta: 16:45h-17:30h",
                     "Terça e Quinta: 17:50h-18:30h",
                     "Terça e Quinta: 18:45h-19:30h",
-                    "Terça: 19:30-20:15h",
+                    "Terça: 19:30h-20:15h",
                 ]
             },
             "3":{
